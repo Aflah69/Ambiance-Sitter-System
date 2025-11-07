@@ -53,3 +53,18 @@ Checksum:
 The final byte ensures data validity.
 The microcontroller adds the first four bytes and compares with the checksum.
 If they match, the data is valid.
+
+Hardware Connections — DHT11 to ESP32
+
+The DHT11 sensor communicates with the ESP32 using a single-wire digital interface, so only one GPIO pin is required for data transfer.
+<img width="723" height="740" alt="Blank diagram (3)" src="https://github.com/user-attachments/assets/1c11273a-73db-49c7-b8ac-cf1e21c12c36" />
+
+Connect VCC of the DHT11 to 3.3V output of ESP32.
+The DHT11 works on 3.3V–5V. We use 3.3V to match ESP32 logic levels.
+
+Connect GND of DHT11 to GND of ESP32.
+Common ground ensures proper reference voltage.
+
+Connect DATA pin of DHT11 to GPIO 4 of ESP32.
+This pin is used to read sensor values.
+
