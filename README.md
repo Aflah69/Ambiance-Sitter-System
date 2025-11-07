@@ -78,7 +78,8 @@ Monitor serial output
 → ESP-IDF: Monitor (idf.py -p <port> monitor)
 
 Serial Output:
-<img width="431" height="92" alt="serial_ouput" src="https://github.com/user-attachments/assets/a1a734b0-5f65-4c74-861b-c5b2d8ddce84" />
+
+<img width="500" height="92" alt="serial_ouput" src="https://github.com/user-attachments/assets/a1a734b0-5f65-4c74-861b-c5b2d8ddce84" />
 
 Dashboard Instructions (Python):
 Open Windows Command Prompt
