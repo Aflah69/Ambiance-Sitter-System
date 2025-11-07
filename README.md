@@ -20,13 +20,20 @@ Integrated Microcontroller
 The internal MCU processes raw signals from both sensing elements.
 It applies calibration data stored during manufacturing and prepares the final digital output.
 
-Communication Process
+Communication Process:
+
 The DHT11 uses a one-wire digital communication protocol, requiring only one GPIO pin from the microcontroller.
-Start Signal
+
+Start Signal:
+
 The ESP32 initially pulls the data pin LOW for about 18 ms to request data.
-Sensor Response
+
+Sensor Response:
+
 The DHT11 acknowledges by pulling the line LOW and then HIGH.
-Data Transmission
+
+Data Transmission:
+
 The sensor sends a 40-bit digital data packet:
 8 bits  → Humidity integer
 8 bits  → Humidity decimal
@@ -34,13 +41,15 @@ The sensor sends a 40-bit digital data packet:
 8 bits  → Temperature decimal
 8 bits  → Checksum
 
-Bit Interpretation
+Bit Interpretation:
+
 Each bit is transmitted as a signal with a specific pulse width:
 Short HIGH pulse → 0
 Longer HIGH pulse → 1
 The microcontroller measures pulse timing to reconstruct data.
 
-Checksum
+Checksum:
+
 The final byte ensures data validity.
 The microcontroller adds the first four bytes and compares with the checksum.
 If they match, the data is valid.
